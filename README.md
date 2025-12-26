@@ -6,16 +6,14 @@ This repository contains my custom Rofi configuration with image-based theming.
 ## Installation
 
 1. Clone the configuration  
-Copy the rofi directory into your Rofi config path:
+Copy the rofitheme.rasi file into your Rofi config path:
 
-cp -r rofi ~/.config/
+cp -r rofitheme ~/.config/rofi
 
 2. Set up background images  
-Create a directory for Rofi backgrounds and move your images there:
+Copy the .rofi directory you move your images there to ~/.rofi/.rofi-backgrounds:
 
-mkdir ~/.rofi-backgrounds
-
-Place your background images inside ~/.rofi-backgrounds.
+Place your additional background images inside ~/.rofi-backgrounds.
 
 3. Reload Waybar (Arch Linux)  
 If you’re using Waybar on Arch Linux, reload it so the changes apply.
@@ -24,7 +22,7 @@ If you’re using Waybar on Arch Linux, reload it so the changes apply.
 
 To launch Rofi with this theme:
 
-rofi -show drun -theme ~/.config/rofi/image.rasi
+rofi -show drun -theme ~/.config/rofi/rofitheme.rasi
 
 ## Keybinding (Sway)
 
@@ -36,10 +34,13 @@ Open your Sway config:
 
 Add the following line (example uses Mod + D):
 
-$mod+d exec $menu -show drun -theme ~/.config/rofi/image.rasi
+$mod+d exec $menu -show drun -theme ~/.config/rofi/rofitheme.rasi
 
 ## Notes
 
 - Make sure rofi is installed and working before applying the config.
 - Paths assume a standard Linux home directory layout.
 - Tested on Arch Linux + Sway.
+- remember to check the similarity of names of the pics on the rofitheme.rasi config file and on the 
+.rofi-backgrounds
+
